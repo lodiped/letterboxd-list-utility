@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Merriweather:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -6,11 +6,19 @@
 @tailwind variants;
 
 @layer base {
-    body {
-        @apply bg-background text-white font-['Roboto']
-    }
-    h1, h2, h3 {
-        font-family: 'Merriweather';
-        font-weight: bold;
-    }
+	body {
+		@apply bg-background text-white font-['Inter'];
+	}
+	h1,
+	h2,
+	h3 {
+		font-family: 'Merriweather';
+		font-weight: bold;
+	}
+}
+
+@layer components {
+	.background-gradient {
+		@apply bg-gradient-to-b from-card to-background;
+	}
 }
