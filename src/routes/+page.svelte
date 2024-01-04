@@ -1,5 +1,54 @@
 <script>
-	const films = [{ id: '' }];
+	const films = [
+		{
+			title: 'A Name',
+			year: 1957
+		},
+		{
+			title: 'Another name',
+			year: 1966
+		},
+		{
+			title: 'Bla bla bla',
+			year: 2017
+		},
+		{
+			title: "Let's goooo",
+			year: 1967
+		},
+		{
+			title: 'Adougadougo',
+			year: 1982
+		},
+		{
+			title: 'Something else again',
+			year: 1992
+		},
+		{
+			title: 'Another name',
+			year: 1932
+		},
+		{
+			title: 'Preoccupations',
+			year: 1977
+		},
+		{
+			title: 'Sleepwalkers out',
+			year: 2006
+		},
+		{
+			title: 'The task at hand',
+			year: 2019
+		},
+		{
+			title: 'Focusing',
+			year: 2009
+		},
+		{
+			title: 'Memory',
+			year: 1997
+		}
+	];
 </script>
 
 <main class="background-gradient pt-9">
@@ -45,33 +94,12 @@
 			</div>
 			<h2 class="text-greytext font-normal mt-3 mb-5 text-sm">description and stuff lmao</h2>
 			<div class="inline-flex flex-wrap gap-2.5">
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
-				<div
-					class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-				></div>
+				{#each films as film, index}
+					<div
+						title={film.title + ' (' + film.year + ')'}
+						class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
+					></div>
+				{/each}
 			</div>
 		</div>
 	</div>
