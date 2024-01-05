@@ -52,7 +52,7 @@
 </script>
 
 <main class="background-gradient pt-9">
-	<div class="w-full flex justify-center gap-12 background-gradient">
+	<div class="w-full flex justify-center gap-12">
 		<div class="w-[670px]">
 			<div>
 				<div class="flex items-center text-xs">
@@ -82,17 +82,15 @@
 					</div>
 				</div>
 			</div>
-			<div class="flex">
-				<h2 class="text-2xl my-1 font-['Inter']">
-					List title abcde sejairg dragjhra rgh hta h tjhha htath tha tha
-				</h2>
+			<div class="flex justify-between">
+				<h2 class="text-2xl my-1 font-['Inter']">List title abcde sejairg</h2>
 				<button
 					class="p-1 rounded bg-orange-600/30 border-t border-orange-600/40 h-fit text-xs text-nowrap text-orange-600/60 hover:text-white hover:bg-orange-600/75 cursor-pointer mt-4 whitespace-nowrap"
 				>
-					Read notes
+					<span>IC </span><span>Read Notes</span>
 				</button>
 			</div>
-			<h2 class="text-greytext font-normal mt-3 mb-5 text-sm">description and stuff lmao</h2>
+			<h2 class="text-greytext font-normal mt-2 mb-5 text-sm">description and stuff lmao</h2>
 			<div class="inline-flex flex-wrap gap-2.5">
 				{#each films as film, index}
 					<button

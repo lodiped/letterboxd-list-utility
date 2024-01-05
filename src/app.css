@@ -19,6 +19,6 @@
 
 @layer components {
 	.background-gradient {
-		@apply bg-gradient-to-b from-card to-background;
+		@apply bg-gradient-to-b from-card/70 to-background;
 	}
 }
