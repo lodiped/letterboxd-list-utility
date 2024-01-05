@@ -52,7 +52,7 @@
 </script>
 
 <main class="background-gradient pt-9">
-	<div class="w-full flex items-center flex-col background-gradient">
+	<div class="w-full flex justify-center gap-12 background-gradient">
 		<div class="w-[670px]">
 			<div>
 				<div class="flex items-center text-xs">
@@ -86,21 +86,39 @@
 				<h2 class="text-2xl my-1 font-['Inter']">
 					List title abcde sejairg dragjhra rgh hta h tjhha htath tha tha
 				</h2>
-				<div
+				<button
 					class="p-1 rounded bg-orange-600/30 border-t border-orange-600/40 h-fit text-xs text-nowrap text-orange-600/60 hover:text-white hover:bg-orange-600/75 cursor-pointer mt-4 whitespace-nowrap"
 				>
 					Read notes
-				</div>
+				</button>
 			</div>
 			<h2 class="text-greytext font-normal mt-3 mb-5 text-sm">description and stuff lmao</h2>
 			<div class="inline-flex flex-wrap gap-2.5">
 				{#each films as film, index}
-					<div
+					<button
 						title={film.title + ' (' + film.year + ')'}
 						class="border cursor-pointer hover:border-4 hover:border-lime-400 border-greytext h-[187px] w-[125px] rounded bg-card"
-					></div>
+					></button>
 				{/each}
 			</div>
+			<div class="mt-12">
+				<div class="border-b border-card flex justify-between">
+					<span class="text-xs py-1.5 text-greytext tracking-widest">COMMENT?</span>
+					<span class="text-xs py-1.5 text-greytext tracking-widest">ICON</span>
+				</div>
+			</div>
+		</div>
+		<div class="w-[230px] gap-px flex flex-col">
+			<button
+				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-t w-full"
+			>
+				Create General Poll
+			</button>
+			<button
+				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-b w-full"
+			>
+				Create Individual Polls
+			</button>
 		</div>
 	</div>
 </main>
