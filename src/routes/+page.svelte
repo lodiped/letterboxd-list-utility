@@ -49,6 +49,12 @@
 			year: 1997
 		}
 	];
+
+	const listDate = [
+		{ text: 'Updated ', when: 'WHEN 1' },
+		{ text: 'Published ', when: 'WHEN 2' }
+	];
+	$: listHover = false;
 </script>
 
 <main class="background-gradient pt-9">
@@ -65,7 +71,20 @@
 				<div
 					class="text-[#678] text-xs tracking-wide w-full border-y justify-between border-[#678] flex my-3 py-1.5"
 				>
-					<div class="justify-start flex cursor-default"><span>Updated when</span></div>
+					<div class="justify-start flex cursor-default">
+						<!-- svelte-ignore a11y-no-static-element-interactions -->
+						<span
+							on:mouseenter={() => {
+								listHover = true;
+							}}
+							on:mouseleave={() => {
+								listHover = false;
+							}}
+							>{listHover
+								? listDate[1].text + listDate[1].when
+								: listDate[0].text + listDate[0].when}</span
+						>
+					</div>
 					<div class="flex justify-end gap-3">
 						<div class="hover:text-greytext cursor-default">
 							DECADE <span class="text-[#678]/75">V</span>
@@ -108,12 +127,12 @@
 		</div>
 		<div class="w-[230px] gap-px flex flex-col">
 			<button
-				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-t w-full"
+				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-t hover:text-white w-full"
 			>
 				Create General Poll
 			</button>
 			<button
-				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-b w-full"
+				class="bg-actioncard justify-center flex text-sm text-actiontext py-2 rounded-b w-full hover:text-white"
 			>
 				Create Individual Polls
 			</button>
